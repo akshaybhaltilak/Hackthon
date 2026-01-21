@@ -17,9 +17,10 @@ const Navbar = () => {
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent">
-                WebReich Hackathon
+                VIKRAMA CODE
+CARNIVAL 2026
               </h1>
-              <p className="text-xs text-gray-400">Shivaji College, Akola</p>
+              <p className="text-xs text-gray-400">सृजनं विजयते</p>
             </div>
           </div>
 
@@ -33,7 +34,7 @@ const Navbar = () => {
               
               <div className="flex items-center bg-gradient-to-r from-gray-800 to-gray-900 px-4 py-2 rounded-full border border-orange-500/20">
                 <span className="text-orange-400 mr-2">⏰</span>
-                <span className="text-white text-sm font-medium">12 Hours</span>
+                <span className="text-white text-sm font-medium">8 Hours</span>
               </div>
               
               <div className="flex items-center bg-gradient-to-r from-orange-600 to-amber-500 px-4 py-2 rounded-full shadow-lg">

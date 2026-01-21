@@ -110,7 +110,8 @@ const RegistrationForm = () => {
       projectDescription,
       registeredAt: new Date().toISOString(),
       teamSize: 1 + members.filter(member => member.name.trim() !== '').length,
-      registeredBy: user.uid
+      registeredBy: user.uid,
+      eventName: 'VIKRAMA CODE CARNIVAL 2026'
     };
 
     try {
@@ -166,76 +167,82 @@ const RegistrationForm = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 via-orange-500/15 to-amber-600/20"></div>
             <div className="absolute inset-0 bg-black/50"></div>
             <div className="relative p-8 md:p-12 text-center">
-              <div className="inline-block mb-6 p-3  rounded-full shadow-2xl">
-                <div className="w-20 h-20 flex items-center justify-center">
-                 <img src="https://webreich.vercel.app/logo.png" alt="" />
+              <div className="inline-flex items-center justify-center mb-6">
+                <div className="w-20 h-20 bg-gradient-to-r from-orange-600 to-amber-500 rounded-full flex items-center justify-center shadow-2xl">
+                  <span className="text-3xl font-bold text-black">V</span>
                 </div>
               </div>
               
               <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                Join <span className="text-orange-400">WebReich Hackathon 2026</span>
+                Welcome to <span className="bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent">VIKRAMA CODE CARNIVAL</span>
               </h1>
+              <div className="mb-6">
+                <div className="inline-flex items-center px-4 py-1 bg-gradient-to-r from-gray-800 to-gray-900 rounded-full border border-orange-500/30">
+                  <span className="text-amber-300 text-sm font-semibold">सृजनं विजयते</span>
+                  <span className="text-gray-400 text-xs ml-2">(Creativity Always Wins)</span>
+                </div>
+              </div>
               <p className="text-lg text-gray-300 mb-8">
-                Register your team to compete for exciting prizes and showcase your skills
+                Register your team to compete in Maharashtra's premier coding event
               </p>
             </div>
           </div>
 
           {/* Login Section */}
-        <div className="bg-gradient-to-br from-gray-900 to-black rounded-3xl shadow-2xl p-8 border border-orange-500/20">
-  <div className="text-center mb-8">
-    <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-orange-600 to-amber-500 rounded-full mb-4 shadow-xl">
-      <span className="text-4xl text-black">🔐</span>
-    </div>
-    <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Welcome Developer!</h2>
-    <p className="text-gray-400">Login with Google to register your team</p>
-  </div>
+          <div className="bg-gradient-to-br from-gray-900 to-black rounded-3xl shadow-2xl p-8 border border-orange-500/20">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-orange-600 to-amber-500 rounded-full mb-4 shadow-xl">
+                <span className="text-4xl text-black">🔐</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Welcome Innovator!</h2>
+              <p className="text-gray-400">Login with Google to register your team</p>
+            </div>
 
-  <div className="space-y-6">
-    <div className="flex justify-center">
-      <button
-        onClick={handleGoogleLogin}
-        className="group relative w-full max-w-md"
-      >
-        <div className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-amber-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-        <div className="relative bg-gray-900 text-white px-8 py-4 rounded-xl border border-orange-500/30 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl transition-all duration-300 w-full">
-          <svg className="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24">
-            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-          </svg>
-          <span className="text-lg font-medium">Continue with Google</span>
-        </div>
-      </button>
-    </div>
+            <div className="space-y-6">
+              <div className="flex justify-center">
+                <button
+                  onClick={handleGoogleLogin}
+                  className="group relative w-full max-w-md"
+                >
+                  <div className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-amber-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                  <div className="relative bg-gray-900 text-white px-8 py-4 rounded-xl border border-orange-500/30 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl transition-all duration-300 w-full">
+                    <svg className="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24">
+                      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                    <span className="text-lg font-medium">Continue with Google</span>
+                  </div>
+                </button>
+              </div>
 
-    <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-orange-500/10">
-      <h4 className="text-orange-400 font-semibold mb-3 flex items-center">
-        <span className="mr-2">ℹ️</span>
-        Why Google Login?
-      </h4>
-      <ul className="text-gray-300 space-y-2 text-sm">
-        <li className="flex items-start">
-          <span className="text-orange-500 mr-2">✓</span>
-          <span>Auto-fill your details as team captain</span>
-        </li>
-        <li className="flex items-start">
-          <span className="text-orange-500 mr-2">✓</span>
-          <span>Secure registration with your account</span>
-        </li>
-        <li className="flex items-start">
-          <span className="text-orange-500 mr-2">✓</span>
-          <span>Receive updates about the hackathon</span>
-        </li>
-        <li className="flex items-start">
-          <span className="text-orange-500 mr-2">✓</span>
-          <span>Easy access to your registration</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+              <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-orange-500/10">
+                <h4 className="text-orange-400 font-semibold mb-3 flex items-center">
+                  <span className="mr-2">ℹ️</span>
+                  Why Google Login?
+                </h4>
+                <ul className="text-gray-300 space-y-2 text-sm">
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    <span>Auto-fill your details as team captain</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    <span>Secure registration with your account</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    <span>Receive updates about the event</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2">✓</span>
+                    <span>Easy access to your registration</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -274,8 +281,14 @@ const RegistrationForm = () => {
                 <div className="text-black text-5xl animate-pulse">✓</div>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Registration Successful!</h2>
+              <div className="mb-6">
+                <div className="inline-flex items-center px-4 py-1 bg-gradient-to-r from-gray-800 to-gray-900 rounded-full border border-orange-500/30">
+                  <span className="text-amber-300 text-sm font-semibold">सृजनं विजयते</span>
+                  <span className="text-gray-400 text-xs ml-2">(Creativity Always Wins)</span>
+                </div>
+              </div>
               <p className="text-gray-300 mb-8 text-lg">
-                Your team has been successfully registered for the WebReich Solutions Hackathon.
+                Your team has been successfully registered for VIKRAMA CODE CARNIVAL 2026.
               </p>
               
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 border-l-4 border-orange-500 p-6 rounded-xl mb-8 text-left">
@@ -286,12 +299,16 @@ const RegistrationForm = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-3">
                     <p className="text-gray-300">
+                      <span className="font-semibold text-orange-400">Event:</span><br/>
+                      VIKRAMA CODE CARNIVAL 2026
+                    </p>
+                    <p className="text-gray-300">
                       <span className="font-semibold text-orange-400">Date:</span><br/>
                       3rd February 2026
                     </p>
                     <p className="text-gray-300">
                       <span className="font-semibold text-orange-400">Duration:</span><br/>
-                      12 Hours
+                      8 Hours (9:00 AM - 5:00 PM)
                     </p>
                   </div>
                   <div className="space-y-3">
@@ -300,8 +317,12 @@ const RegistrationForm = () => {
                       Shivaji College of Art and Science, Akola
                     </p>
                     <p className="text-gray-300">
-                      <span className="font-semibold text-orange-400">Time:</span><br/>
-                      9:00 AM to 9:00 PM
+                      <span className="font-semibold text-orange-400">Mode:</span><br/>
+                      Offline (On-Campus)
+                    </p>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-orange-400">Level:</span><br/>
+                      <span className="text-orange-400">State Level</span>
                     </p>
                   </div>
                 </div>
@@ -354,11 +375,25 @@ const RegistrationForm = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 via-orange-500/15 to-amber-600/20"></div>
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="relative p-6 md:p-10 text-center">
-            <h1 className="text-2xl md:text-3xl font-bold mb-4 text-white">
-              Register Your <span className="text-orange-400">Team</span> for Hackathon
+            <div className="inline-flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-amber-500 rounded-full flex items-center justify-center shadow-2xl">
+                <span className="text-2xl font-bold text-black">V</span>
+              </div>
+            </div>
+            <h1 className="text-2xl md:text-3xl font-bold mb-2 text-white">
+              Register for <span className="bg-gradient-to-r from-orange-400 via-amber-300 to-orange-400 bg-clip-text text-transparent">VIKRAMA CODE CARNIVAL</span>
             </h1>
-            <p className="text-gray-300 mb-6">
-              Fill in the details below to participate in WebReich Solutions Hackathon 2026
+            <div className="mb-4">
+              <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-gray-800 to-gray-900 rounded-full border border-orange-500/30">
+                <span className="text-amber-300 text-sm font-semibold">सृजनं विजयते</span>
+                <span className="text-gray-400 text-xs ml-2">(Creativity Always Wins)</span>
+              </div>
+            </div>
+            <p className="text-gray-300 mb-2">
+              Maharashtra's Premier State Level Coding Event
+            </p>
+            <p className="text-orange-400 text-sm font-medium">
+              3rd February 2026 | Shivaji College, Akola | 8 Hours Challenge
             </p>
           </div>
         </div>
@@ -633,7 +668,7 @@ const RegistrationForm = () => {
                         Submitting Registration...
                       </span>
                     ) : (
-                      'Register Team for Hackathon'
+                      'Register Team for VIKRAMA CODE CARNIVAL'
                     )}
                   </div>
                 </button>
@@ -642,8 +677,14 @@ const RegistrationForm = () => {
                   <div className="flex items-start">
                     <span className="text-orange-400 mr-3">📝</span>
                     <div>
+                      <h4 className="text-white font-semibold mb-2">Important Information</h4>
+                      <p className="text-gray-300 mb-2">
+                        <strong className="text-orange-400">Note:</strong> Once submitted, you cannot edit your registration. Please double-check all information before submitting.
+                      </p>
                       <p className="text-gray-300">
-                        <strong className="text-orange-400">Important:</strong> Once submitted, you cannot edit your registration. Please double-check all information before submitting.
+                        <strong className="text-orange-400">Slogan:</strong> 
+                        <span className="ml-2 text-amber-300 font-medium">"सृजनं विजयते"</span> 
+                        <span className="text-gray-400 ml-2">(Creativity Always Wins)</span>
                       </p>
                       <p className="text-gray-400 text-sm mt-2">
                         Make sure all team details are accurate for smooth communication and verification.
