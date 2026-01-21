@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './Components/Home';
 import AdminPanel from './Components/AdminPanel';
 import AboutPage from './Components/AboutPage';
 import PrizesPage from './Components/PrizesPage';
 import AdminLogin from './Components/AdminLogin';
+import Navbar from './Components/Navbar';
+import RegistrationForm from './Components/RegistrationForm';
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -33,26 +36,33 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/admin/dashboard" element={null} />
+        <Route path="*" element={<Navbar />} />
+      </Routes>
+
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/prizes" element={<PrizesPage />} />
-        
+        <Route path="/register" element={<RegistrationForm />} />
+
         {/* Admin Routes */}
-        <Route 
-          path="/admin/login" 
+        <Route
+          path="/admin/login"
           element={
-            <AdminLogin 
+            <AdminLogin
               adminKey={adminKey}
               setAdminKey={setAdminKey}
               handleAdminLogin={() => handleAdminLogin(adminKey)}
             />
-          } 
+          }
         />
-        
-        <Route 
-          path="/admin/dashboard" 
+
+        <Route
+          path="/admin/dashboard"
           element={
             <ProtectedRoute>
               <div className="relative">
@@ -68,9 +78,9 @@ function App() {
                 </div>
               </div>
             </ProtectedRoute>
-          } 
+          }
         />
-        
+
         {/* Redirects */}
         <Route path="/admin" element={<Navigate to="/admin/login" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
